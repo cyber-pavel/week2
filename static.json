@@ -4,7 +4,11 @@
       "X-Author": "id549206267",
       "Access-Control-Allow-Origin": "*"
     }
-   "/login":{
+  }
+}
+{
+  "headers":{
+  "/login":{
       "Access-Control-Allow-Origin": "*"
     }
   }

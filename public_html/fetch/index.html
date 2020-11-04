@@ -7,12 +7,11 @@
   <button id='bt'>Кнопка</button>
      
      <script>
-        document.querySelector('button')
-        .addEventListener('click'){
-        async function doButtonClick(){await fetch(url)}    
-        document.getElementById('inp').value;
-        await response.text();
-        document.getElementById('inp').value = text;
+          bt.addEventListener('click', async function doButtonClick(){
+          let url = document.getElementById('inp').value;
+          let response = await fetch(url);
+          let text = await response.text();
+          document.getElementById('inp').value = text;
         });
      </script>
   

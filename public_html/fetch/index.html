@@ -1,10 +1,13 @@
-<!DOCTYPE html>
+<!DOCTYPE>
 <html>
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  
-  <input type='text' id='inp'>
-  <button id='bt'>Кнопка</button>
+  <meta name="viewport" content="text/html; charset=utf-8">
+
+</head>
+ <body>
+ 
+     <input type='twxt' id='inp'>
+     <button id='bt'>Кнопка</button>
      
      <script>
           bt.addEventListener('click', async function doButtonClick(){
@@ -12,9 +15,11 @@
           let response = await fetch(url);
           let text = await response.text();
           document.getElementById('inp').value = text;
-        });
      </script>
-  
 
-</head>
- <body>
+     
+   
+ 
+
+ </body>
+</html>

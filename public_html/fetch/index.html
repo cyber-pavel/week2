@@ -6,16 +6,28 @@
 </head>
  <body>
  
-     <input type="text" id="inp" value="">
+     <input type="text" id="inp">
      <button id="bt">Кнопка</button>
      
-     <script>
-          bt.addEventListener('click', async function doButtonClick(){
-          let url = document.getElementById('inp').value;
-          let response = await fetch(url);
-          let text = await response.text();
-          document.getElementById('inp').value = text;
-     </script>
+    <script>
+		const listener = () => {
+			const button = document.getElementById('bt');
+			button.addEventListener('click', () => {
+				const input = document.getElementById('inp');
+				const { value } = input;
+				fetch(value)
+					.then((data) => {
+						data.text().then((v) => {
+							input.value = v;
+						});
+					})
+					.catch((e) => console.log(e))
+			});
+		};
+		listener();
+	</script>	
+</body>
+</html>
 
      
    
